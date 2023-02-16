@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+import { FormContext } from "../../context/ContextoFormulario";
 
 const Detalle = () => {
   // Aqui deberíamos obtener los datos del formulario para poder mostrarlo en
   // la vista previa.
+  const {inputs, } = useContext(FormContext)
 
   return (
     <div className="detalle-formulario">
@@ -12,15 +14,15 @@ const Detalle = () => {
       <section className="datos-cliente">
         <h4>Datos del Entrenador</h4>
         <div className="fila">
-          <p>Nombre:</p>
-          <p>Apellido:</p>
-          <p>Email:</p>
+          <p>Nombre: {inputs.nombre}</p>
+          <p>Apellido: {inputs.apellido}</p>
+          <p>Email: {inputs.email}</p>
         </div>
       </section>
       <section className="datos-cliente">
         <h4>Datos del Pokémon</h4>
         <div className="fila">
-          <p>Nombre:</p>
+          <p>Nombre: {inputs.nombrePokemon}</p>
         </div>
       </section>
       <button
