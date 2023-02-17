@@ -124,6 +124,7 @@ h1 {
 
 .detalle-formulario {
   width: 70%;
+  height: fit-content;
   border: 1px solid darkgray;
   margin: 0 3rem;
   border-radius: 6px;

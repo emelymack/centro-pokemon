@@ -4,7 +4,7 @@ import { FormContext } from "../../context/ContextoFormulario";
 const Detalle = () => {
   // Aqui deberíamos obtener los datos del formulario para poder mostrarlo en
   // la vista previa.
-  const {inputs, } = useContext(FormContext)
+  const [inputs, ] = useContext(FormContext)
 
   return (
     <div className="detalle-formulario">
@@ -23,6 +23,10 @@ const Detalle = () => {
         <h4>Datos del Pokémon</h4>
         <div className="fila">
           <p>Nombre: {inputs.nombrePokemon}</p>
+          <p>Tipo: {inputs.tipoPokemon}</p>
+          <p>Elemento: {inputs.elemento}</p>
+          <p>Altura: {inputs.altura}</p>
+          <p>Edad: {inputs.edad}</p>
         </div>
       </section>
       <button

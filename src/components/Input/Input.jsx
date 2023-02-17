@@ -1,12 +1,12 @@
 import React, { useContext, useState } from "react";
 import { FormContext } from "../../context/ContextoFormulario";
 
-const Input = ({ name, label, type = "text" }) => {
+const Input = ({ name, label, type = "text", objType }) => {
   // Aqui deberíamos acceder al estado global para poder obtener los datos
   // del formulario y una manera de actualizar los mismos.
 
   // También, utilizaremos un estado local para manejar el estado del input.
-  const {inputs, setInputs} = useContext(FormContext)
+  const [inputs, dispatch] = useContext(FormContext)
   const [ activeInput, setActiveInput ] = useState()
 
   const onChange = (e) => {
@@ -22,8 +22,10 @@ const Input = ({ name, label, type = "text" }) => {
     // TIP: Podemos utilizar el nombre de cada input para guardar
     // los datos en el estado global usando una notación de { clave: valor }
     
-    setInputs({ ...inputs, [e.target.id]: activeInput})
-
+    dispatch({
+      type: objType === "entrenador" ? "ACTUALIZAR_ENTRENADOR" : "ACTUALIZAR_POKEMON",
+      payload: { ...inputs, [e.target.id]: activeInput} 
+    })
   };
 
   return (
@@ -31,7 +33,6 @@ const Input = ({ name, label, type = "text" }) => {
       <label htmlFor={name}>{label}</label>
       <input
         type={type}
-        
         id={name}
         onChange={onChange}
         onBlur={onBlur}
