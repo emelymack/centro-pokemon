@@ -140,7 +140,9 @@ h1 {
 
 .cuerpo-formulario .inputs {
   width: 40%;
+  height: fit-content;
   margin-left: 2rem;
+  padding-bottom: 50px;
 }
 
 .nombre-seccion {

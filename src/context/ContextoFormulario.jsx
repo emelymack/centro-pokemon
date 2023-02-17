@@ -5,14 +5,18 @@ import { createContext, useReducer, useState } from "react";
 export const FormContext = createContext({});
 
 export const initialState = {
-  nombre: '',
-  apellido: '',
-  email: '',
-  nombrePokemon: '',
-  tipoPokemon: '',
-  elemento: '',
-  altura: '',
-  edad: ''
+  entrenador: {
+    nombre: '',
+    apellido: '',
+    email: '',
+  },
+  pokemon: {
+    nombrePokemon: '',
+    tipoPokemon: '',
+    elemento: '',
+    altura: '',
+    edad: ''
+  }
 }
 
 export const inputsReducer = (state, action) => {
@@ -20,22 +24,25 @@ export const inputsReducer = (state, action) => {
     case "ACTUALIZAR_ENTRENADOR" : {
       return {
         ...state,
-        nombre: action.payload.nombre,
-        apellido: action.payload.apellido,
-        email: action.payload.email,
+        entrenador: { 
+          ...state.entrenador,
+          ...action.payload
+        }
       };
     }
     case "ACTUALIZAR_POKEMON" : {
       return {
         ...state,
-        nombrePokemon: action.payload.nombrePokemon,
-        tipoPokemon: action.payload.tipoPokemon,
-        elemento: action.payload.elemento,
-        altura: action.payload.altura,
-        edad: action.payload.edad
+        pokemon: {
+          ...state.pokemon,
+          ...action.payload
+        }
       };
     }
-    default: 
+    case "ENVIADO": 
+      return initialState;
+    
+    default:
       return initialState;
   }
 }
