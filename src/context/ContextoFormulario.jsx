@@ -19,6 +19,12 @@ export const initialState = {
   }
 }
 
+/**
+ * En esta función actualizamos los estados que contienen los valores de los inputs
+ * @param {*} state 
+ * @param {*} action 
+ * @returns {Object}
+ */
 export const inputsReducer = (state, action) => {
   switch (action.type) {
     case "ACTUALIZAR_ENTRENADOR" : {

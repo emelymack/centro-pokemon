@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { FormContext } from "../../context/ContextoFormulario";
+import PropTypes from 'prop-types';
 
 const Input = ({ name, label, type = "text", objType }) => {
   // Aqui deberíamos acceder al estado global para poder obtener los datos
@@ -42,3 +43,10 @@ const Input = ({ name, label, type = "text", objType }) => {
 };
 
 export default Input;
+
+Input.propTypes = {
+  name: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  objType: PropTypes.string.isRequired // si es un input de ENTRENADOR o POKEMON
+}
