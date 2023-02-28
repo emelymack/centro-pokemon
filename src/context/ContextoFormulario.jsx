@@ -3,6 +3,30 @@
 import { createContext, useReducer, useState } from "react";
 
 export const FormContext = createContext({});
+/**
+ * @typedef {object} initialState
+ * @property { entrenador | undefined } entrenador
+ * @property { pokemon | undefined } pokemon
+ */
+/**
+ * @typedef {object} entrenador
+ * @property {string} nombre
+ * @property {string} apellido
+ * @property {string} email
+ */
+/**
+ * @typedef {object} pokemon
+ * @property {string} nombrePokemon
+ * @property {string} tipoPokemon
+ * @property {string} elemento
+ * @property {number} altura
+ * @property {number} edad
+ */
+/**
+ * @typedef {object} action
+ * @property {string} type
+ * @property {object} payload
+ */
 
 export const initialState = {
   entrenador: {
@@ -20,10 +44,10 @@ export const initialState = {
 }
 
 /**
- * En esta función actualizamos los estados que contienen los valores de los inputs
- * @param {*} state 
- * @param {*} action 
- * @returns {Object}
+ * @description En esta función actualizamos los estados de entrenador y pokemon
+ * @param {initialState} state recibe el estado inicial
+ * @param {action} action recibe la acción a realizar para modificar el estado
+ * @returns {initialState}
  */
 export const inputsReducer = (state, action) => {
   switch (action.type) {
@@ -61,4 +85,8 @@ export const FormProvider = ({children}) => {
       {children}
     </FormContext.Provider>
   )
+}
+
+FormProvider.propTypes = {
+  children: PropTypes.element.isRequired, // .element especifica que únicamente un hijo se pase al componente
 }

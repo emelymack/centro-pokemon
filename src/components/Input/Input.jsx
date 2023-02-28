@@ -10,18 +10,22 @@ const Input = ({ name, label, type = "text", objType }) => {
   const [inputs, dispatch] = useContext(FormContext)
   const [ activeInput, setActiveInput ] = useState()
 
+  /**
+   * @description Función para actualizar el estado local del input
+   * @param {InputEvent} e 
+   */
   const onChange = (e) => {
-    // Aquí deberíamos actualizar el estado local del input.
     setActiveInput(e.target.value)
   };
 
+  /**
+   * @description Función que se ejecuta cuando el input pierde el foco, enviando el valor del input al contexto (i.e. actualizando el estado global) que es luego utilizado por el componente Detalle
+   * @param {InputEvent} e 
+   */
   const onBlur = (e) => {
     e.preventDefault();
-
-    // Aqui deberíamos actualizar el estado global con los datos de
-    // cada input.
-    // TIP: Podemos utilizar el nombre de cada input para guardar
-    // los datos en el estado global usando una notación de { clave: valor }
+    
+    // TIP: Podemos utilizar el nombre de cada input para guardar los datos en el estado global usando una notación de { clave: valor }
     
     dispatch({
       type: objType === "entrenador" ? "ACTUALIZAR_ENTRENADOR" : "ACTUALIZAR_POKEMON",
