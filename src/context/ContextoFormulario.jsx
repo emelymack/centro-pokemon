@@ -1,6 +1,7 @@
 // Aqui debemos crear nuestro contexto y nuestro provider.
 
 import { createContext, useReducer, useState } from "react";
+import PropTypes from 'prop-types';
 
 export const FormContext = createContext({});
 /**

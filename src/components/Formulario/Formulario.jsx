@@ -1,10 +1,11 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import pokebola from "../../assets/pokebola.png";
 import entrenador from "../../assets/entrenador.png";
 import pikachu from "../../assets/pikachu.png";
 import Input from "../Input/Input";
 import Detalle from "./Detalle";
+import { SelectType } from "../Input/SelectType";
 
 // En este componente tenemos nuestro formulario y dentro de él
 // tenemos los componentes que necesitan consumir nuestro estado.
@@ -51,7 +52,7 @@ const Formulario = () => {
                 <span>POKEMON</span>
               </p>
               <Input name="nombrePokemon" label="Nombre" objType="pokemon"  />
-              <Input name="tipoPokemon" label="Tipo" objType="pokemon"  />
+              <SelectType name="tipoPokemon" />
               <Input name="elemento" label="Elemento" objType="pokemon"  />
               <Input name="altura" label="Altura" type="number" objType="pokemon"  />
               <Input name="edad" label="Edad" type="number" objType="pokemon"  />
