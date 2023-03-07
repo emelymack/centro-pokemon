@@ -1,0 +1,344 @@
+{
+  "inputs": [
+    {
+      "id": 1,
+      "entrenador": {
+        "nombre": "Test",
+        "apellido": "Testing",
+        "email": "test@test.com"
+      },
+      "pokemon": {
+        "nombrePokemon": "Pikachu",
+        "tipoPokemon": "normal",
+        "elemento": "fire",
+        "altura": "94",
+        "edad": "12"
+      }
+    },
+    {
+      "entrenador": {
+        "nombre": "Emely",
+        "apellido": "Mack",
+        "email": "emelymack@gmail.com"
+      },
+      "pokemon": {
+        "nombrePokemon": "pikachu",
+        "tipoPokemon": "psychic",
+        "elemento": "water",
+        "altura": "122",
+        "edad": "13"
+      },
+      "id": 2
+    },
+    {
+      "entrenador": {
+        "nombre": "Pepe",
+        "apellido": "Argento",
+        "email": "pepe@gmail.com"
+      },
+      "pokemon": {
+        "nombrePokemon": "pikachu",
+        "tipoPokemon": "ghost",
+        "elemento": "fire",
+        "altura": "123",
+        "edad": "10"
+      },
+      "id": 3
+    },
+    {
+      "entrenador": {
+        "nombre": "Lucia",
+        "apellido": "Perez",
+        "email": "luli@mail.com"
+      },
+      "pokemon": {
+        "nombrePokemon": "Katmandur",
+        "tipoPokemon": "ground",
+        "elemento": "earth",
+        "altura": "75",
+        "edad": "9"
+      },
+      "id": 4
+    },
+    {
+      "entrenador": {
+        "nombre": "Fabiana Andrea",
+        "apellido": "Paloma",
+        "email": "fabipalo17@gmail.com"
+      },
+      "pokemon": {
+        "nombrePokemon": "pikachu",
+        "tipoPokemon": "psychic",
+        "elemento": "asdas",
+        "altura": "123",
+        "edad": "123"
+      },
+      "id": 5
+    },
+    {
+      "entrenador": {
+        "nombre": "Fabiana Andrea",
+        "apellido": "Paloma",
+        "email": "fabipalo17@gmail.com"
+      },
+      "pokemon": {
+        "nombrePokemon": "pikachu",
+        "tipoPokemon": "psychic",
+        "elemento": "asdas",
+        "altura": "123",
+        "edad": "123"
+      },
+      "id": 6
+    },
+    {
+      "entrenador": {
+        "nombre": "Fabiana Andrea",
+        "apellido": "Paloma",
+        "email": "fabipalo17@gmail.com"
+      },
+      "pokemon": {
+        "nombrePokemon": "pikachu",
+        "tipoPokemon": "psychic",
+        "elemento": "asdas",
+        "altura": "123",
+        "edad": "123"
+      },
+      "id": 7
+    },
+    {
+      "entrenador": {
+        "nombre": "Fabiana Andrea",
+        "apellido": "Paloma",
+        "email": "fabipalo17@gmail.com"
+      },
+      "pokemon": {
+        "nombrePokemon": "pikachu",
+        "tipoPokemon": "psychic",
+        "elemento": "asdas",
+        "altura": "123",
+        "edad": "123"
+      },
+      "id": 8
+    },
+    {
+      "entrenador": {
+        "nombre": "Fabiana Andrea",
+        "apellido": "Paloma",
+        "email": "fabipalomag17@gmail.com"
+      },
+      "pokemon": {
+        "tipoPokemon": "psychic",
+        "elemento": "asdas",
+        "altura": "123",
+        "edad": "123"
+      },
+      "id": 9
+    },
+    {
+      "entrenador": {
+        "nombre": "Emely",
+        "apellido": "Mack",
+        "email": "emelymack@gmail.com"
+      },
+      "pokemon": {
+        "nombrePokemon": "dsadasd",
+        "tipoPokemon": "dragon",
+        "elemento": "adasd",
+        "altura": "123",
+        "edad": "123"
+      },
+      "id": 10
+    },
+    {
+      "id": 11
+    },
+    {
+      "entrenador": {
+        "nombre": "asdasd",
+        "apellido": "asdasd",
+        "email": "ack@gmail.com"
+      },
+      "pokemon": {
+        "nombrePokemon": "",
+        "tipoPokemon": "",
+        "elemento": "",
+        "altura": "",
+        "edad": ""
+      },
+      "id": 12
+    },
+    {
+      "entrenador": {
+        "nombre": "",
+        "apellido": "sadasd",
+        "email": "asdasd"
+      },
+      "pokemon": {
+        "nombrePokemon": "",
+        "tipoPokemon": "",
+        "elemento": "",
+        "altura": "",
+        "edad": ""
+      },
+      "id": 13
+    },
+    {
+      "entrenador": {
+        "nombre": "",
+        "apellido": "",
+        "email": ""
+      },
+      "pokemon": {
+        "nombrePokemon": "asdsad",
+        "tipoPokemon": "",
+        "elemento": "",
+        "altura": "",
+        "edad": ""
+      },
+      "id": 14
+    },
+    {
+      "id": 15
+    },
+    {
+      "id": 16
+    },
+    {
+      "id": 17
+    },
+    {
+      "entrenador": {
+        "nombre": "SAda",
+        "apellido": "ASDASD",
+        "email": ""
+      },
+      "pokemon": {
+        "nombrePokemon": "asdsad",
+        "tipoPokemon": "",
+        "elemento": "",
+        "altura": "",
+        "edad": ""
+      },
+      "id": 18
+    },
+    {
+      "entrenador": {
+        "nombre": "SAda",
+        "apellido": "ASDASD",
+        "email": ""
+      },
+      "pokemon": {
+        "nombrePokemon": "asdsad",
+        "tipoPokemon": "",
+        "elemento": "",
+        "altura": "",
+        "edad": ""
+      },
+      "id": 19
+    },
+    {
+      "entrenador": {
+        "nombre": "asdasdas",
+        "apellido": "adsdasd"
+      },
+      "pokemon": {
+        "nombrePokemon": "",
+        "tipoPokemon": "",
+        "elemento": "",
+        "altura": "",
+        "edad": ""
+      },
+      "id": 20
+    },
+    {
+      "entrenador": {
+        "nombre": "dasdasd",
+        "apellido": "adasd",
+        "email": "adsad"
+      },
+      "pokemon": {
+        "nombrePokemon": "",
+        "tipoPokemon": "",
+        "elemento": "",
+        "altura": "",
+        "edad": ""
+      },
+      "id": 21
+    },
+    {
+      "entrenador": {
+        "nombre": "",
+        "apellido": "asdad",
+        "email": "adad"
+      },
+      "pokemon": {
+        "nombrePokemon": "adsa",
+        "tipoPokemon": "",
+        "elemento": "",
+        "altura": "",
+        "edad": ""
+      },
+      "id": 22
+    },
+    {
+      "entrenador": {
+        "nombre": "",
+        "apellido": "",
+        "email": "adasd"
+      },
+      "pokemon": {
+        "nombrePokemon": "asdasd",
+        "tipoPokemon": "",
+        "elemento": "",
+        "altura": "",
+        "edad": ""
+      },
+      "id": 23
+    },
+    {
+      "entrenador": {
+        "nombre": "adasdsad",
+        "apellido": "asdasd",
+        "email": ""
+      },
+      "pokemon": {
+        "nombrePokemon": "",
+        "tipoPokemon": "",
+        "elemento": "",
+        "altura": "",
+        "edad": ""
+      },
+      "id": 24
+    },
+    {
+      "entrenador": {
+        "nombre": "adasd",
+        "apellido": "sadasdas",
+        "email": "dasdasdsa"
+      },
+      "pokemon": {
+        "nombrePokemon": "dasdasd",
+        "tipoPokemon": "",
+        "elemento": "",
+        "altura": "",
+        "edad": ""
+      },
+      "id": 25
+    },
+    {
+      "entrenador": {
+        "nombre": "dadasdasd",
+        "apellido": "",
+        "email": ""
+      },
+      "pokemon": {
+        "nombrePokemon": "",
+        "tipoPokemon": "",
+        "elemento": "",
+        "altura": "",
+        "edad": ""
+      },
+      "id": 26
+    }
+  ]
+}

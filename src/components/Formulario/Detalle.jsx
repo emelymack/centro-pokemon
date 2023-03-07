@@ -1,10 +1,32 @@
 import React, { useContext } from "react";
+import { useQueryClient, useMutation } from "react-query";
 import { FormContext } from "../../context/ContextoFormulario";
+import {sendForm} from '../../hooks/useAPI'
+import { Loading } from "../Loading";
 
-const Detalle = () => {
+const Detalle = ({formRef}) => {
   // Aqui deberíamos obtener los datos del formulario para poder mostrarlo en
   // la vista previa.
-  const [inputs, dispatch ] = useContext(FormContext)
+  const [ inputs, dispatch ] = useContext(FormContext)
+  const { mutate, isLoading, data, reset, isError,status } = useMutation(sendForm)
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    // console.log(inputs)
+    mutate(inputs,
+      {
+        onSuccess: () => {
+          alert("Formulario enviado :)")
+          formRef.current.reset(); // para que se reseteen los campos del form
+          reset(); // para que se reseteen los datos recibidos por el useMutation
+          dispatch({type: "ENVIADO"})
+        },
+        onError: () => {
+        alert("No hemos podido enviar el formulario, por favor intente nuevamente")
+      }
+    })
+    }
+
 
   return (
     <div className="detalle-formulario">
@@ -31,13 +53,12 @@ const Detalle = () => {
       </section>
       <button
         className="boton-enviar"
-        onClick={() => {
-          alert("Tu solicitud ha sido enviada :)")
-          dispatch({type: "ENVIADO"})
-        }}
+        type="submit"
+        onClick={handleSubmit}
       >
         Enviar Solicitud
       </button>
+      {isLoading && <Loading text={'Enviando formulario...'} />}
     </div>
   );
 };

@@ -29,8 +29,9 @@ const Input = ({ name, label, type = "text", objType }) => {
     
     dispatch({
       type: objType === "entrenador" ? "ACTUALIZAR_ENTRENADOR" : "ACTUALIZAR_POKEMON",
-      payload: { ...inputs, [e.target.id]: activeInput} 
+      payload: { [e.target.id]: activeInput} 
     })
+    
   };
 
   return (

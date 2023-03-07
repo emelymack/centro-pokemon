@@ -1,5 +1,5 @@
-export const Loading = () =>{
+export const Loading = ({text}) =>{
   return (
-    <h1>Loading...</h1>
+    <h5>{text}</h5>
   )
 }

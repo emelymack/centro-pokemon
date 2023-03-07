@@ -3,6 +3,7 @@ import Home from "./components/Home/Home";
 import Formulario from "./components/Formulario/Formulario";
 import "./App.css";
 import { QueryClient, QueryClientProvider } from 'react-query';
+import { ReactQueryDevtools } from 'react-query/devtools'
 
 function App() {
   const queryClient = new QueryClient();
@@ -15,6 +16,7 @@ function App() {
           <Route path="/formularioIngreso" element={<Formulario />} />
         </Routes>
       </div>
+      <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   );
 }

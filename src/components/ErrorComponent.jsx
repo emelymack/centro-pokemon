@@ -1,5 +1,5 @@
 export const ErrorComponent = () =>{
   return (
-    <h1>There was an error, try again later...</h1>
+    <h5>There was an error, try again later...</h5>
   )
 }

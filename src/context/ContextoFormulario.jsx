@@ -31,16 +31,16 @@ export const FormContext = createContext({});
 
 export const initialState = {
   entrenador: {
-    nombre: '',
-    apellido: '',
-    email: '',
+    nombre: "",
+    apellido: "",
+    email: "",
   },
   pokemon: {
-    nombrePokemon: '',
-    tipoPokemon: '',
-    elemento: '',
-    altura: '',
-    edad: ''
+    nombrePokemon: "",
+    tipoPokemon: "",
+    elemento: "",
+    altura: "",
+    edad: ""
   }
 }
 
