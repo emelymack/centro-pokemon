@@ -3,7 +3,8 @@ import Home from "./components/Home/Home";
 import Formulario from "./components/Formulario/Formulario";
 import "./App.css";
 import { QueryClient, QueryClientProvider } from 'react-query';
-import { ReactQueryDevtools } from 'react-query/devtools'
+import { ReactQueryDevtools } from 'react-query/devtools';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const queryClient = new QueryClient();

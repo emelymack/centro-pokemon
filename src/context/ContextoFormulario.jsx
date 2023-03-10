@@ -39,6 +39,7 @@ export const initialState = {
     nombrePokemon: "",
     tipoPokemon: "",
     elemento: "",
+    especie: "",
     altura: "",
     edad: ""
   }

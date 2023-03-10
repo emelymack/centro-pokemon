@@ -47,6 +47,7 @@ const Detalle = ({formRef}) => {
           <p>Nombre: {inputs.pokemon?.nombrePokemon}</p>
           <p>Tipo: {inputs.pokemon?.tipoPokemon}</p>
           <p>Elemento: {inputs.pokemon?.elemento}</p>
+          <p>Especie: {inputs.pokemon?.especie}</p>
           <p>Altura: {inputs.pokemon?.altura}</p>
           <p>Edad: {inputs.pokemon?.edad}</p>
         </div>

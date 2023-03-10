@@ -5,7 +5,9 @@ import entrenador from "../../assets/entrenador.png";
 import pikachu from "../../assets/pikachu.png";
 import Input from "../Input/Input";
 import Detalle from "./Detalle";
-import { SelectType } from "../Input/SelectType";
+import { Select } from "../Input/Select";
+import { getSpecies, getTypes } from "../../hooks/useAPI";
+import { InputModal } from "../Input/InputModal";
 // En este componente tenemos nuestro formulario y dentro de él
 // tenemos los componentes que necesitan consumir nuestro estado.
 // Recuerda cual es el paso que debemos tomar para que nuestros
@@ -48,7 +50,8 @@ const Formulario = () => {
                 <span>POKEMON</span>
               </p>
               <Input name="nombrePokemon" label="Nombre" objType="pokemon"  />
-              <SelectType name="tipoPokemon" label="Tipo" objType="pokemon" />
+              <Select name="tipoPokemon" label="Tipo" objType="pokemon" queryKey={'types'} queryAction={getTypes} />
+              <InputModal name="especie" label="Especie" objType="pokemon" queryKey={'especie'} queryAction={getSpecies} />
               <Input name="elemento" label="Elemento" objType="pokemon"  />
               <Input name="altura" label="Altura" type="number" objType="pokemon"  />
               <Input name="edad" label="Edad" type="number" objType="pokemon"  />

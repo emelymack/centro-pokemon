@@ -1,11 +1,11 @@
-import { useContext, useState } from 'react';
+import { useContext, useRef, useState } from 'react';
 import {useQuery} from 'react-query';
 import { FormContext } from '../../context/ContextoFormulario';
-import {getType} from '../../hooks/useAPI'
+import {getTypes} from '../../hooks/useAPI'
 import {ErrorComponent} from '../ErrorComponent';
 import {Loading} from '../Loading';
 
-export const SelectType = (name, objType, label) =>{
+export const Select = ({name, objType, label, queryKey, queryAction}) =>{
   const [inputs, dispatch] = useContext(FormContext)
   const [ activeInput, setActiveInput ] = useState()
 
@@ -17,19 +17,19 @@ export const SelectType = (name, objType, label) =>{
     e.preventDefault();
     dispatch({
       type: objType === "entrenador" ? "ACTUALIZAR_ENTRENADOR" : "ACTUALIZAR_POKEMON",
-      payload: { tipoPokemon: activeInput} 
+      payload: { [name]: activeInput} 
     })
   };
-  const query = useQuery(['types'], getType)
+  const query = useQuery(queryKey, queryAction)
   const {data, error, isError, isLoading, isSuccess} = query;
 
   return (
     <div className="input-contenedor">
-      <label htmlFor={name}>Tipo</label>
+      <label htmlFor={name}>{label}</label>
       {isError && <ErrorComponent/>}
       {isLoading && <Loading text={'Loading pokemon types'} />}
       {isSuccess && 
-        <select name={name} disabled={!isSuccess} onChange={onChange} onBlur={onBlur}>
+        <select name={name} disabled={!isSuccess} queryKey={queryKey} onChange={onChange} onBlur={onBlur}>
         {data && 
           !isLoading &&
           data?.results.map((elem) => (
@@ -37,7 +37,6 @@ export const SelectType = (name, objType, label) =>{
           ))}
         </select>
       }
-      
     </div>
   )
 }
