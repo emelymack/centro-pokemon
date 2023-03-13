@@ -7,12 +7,12 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { FormContext } from "../../context/ContextoFormulario";
 
-export default function SpeciesList(objType, name){
+export default function SpeciesList({objType, name}){
   const [offset, setOffset] = useState(0);
   const query = useQuery(["species",offset], () => getSpecies(offset));
-  const [ dispatch, ] = useContext(FormContext)
+  const [ , dispatch ] = useContext(FormContext)
   const [ activeInput, setActiveInput ] = useState()
-  const {data, error, isError, isLoading, isSuccess, status} = query;
+  const {data, isError, isLoading} = query;
 
   const handleBackPage = () => {
     setOffset((prev) => Math.max(0, prev - 20))
@@ -21,22 +21,19 @@ export default function SpeciesList(objType, name){
     setOffset((prev) => prev + 20)
   }
 
-  const onChange = (e) => {
-    setActiveInput(e.target.value)
-  };
-
   const onClick = (e)=>{
-    e.preventDefault();
-    
+    setActiveInput(e.target.value)
+  }
+  const onBlur = (e) =>{
     dispatch({
       type: objType === "entrenador" ? "ACTUALIZAR_ENTRENADOR" : "ACTUALIZAR_POKEMON",
-      payload: { [name]: activeInput} 
+      payload: { [e.target.name]: activeInput} 
     })
   }
 
   useEffect(() =>{}, [offset])
 
-  if(status == 'loading'){
+  if(isLoading){
     return <Loading text={'Cargando especies...'} />;
   }
   if(isError){
@@ -53,11 +50,11 @@ export default function SpeciesList(objType, name){
           inline
           label={elem.name}
           value={elem.name}
-          name={name}
+          name='especie'
           type='radio'
           key={`species-${index}`}
-          onChange={onChange}
           onClick={onClick}
+          onBlur={onBlur}
         />
       </div>
     ))}

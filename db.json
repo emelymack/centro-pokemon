@@ -339,6 +339,22 @@
         "edad": ""
       },
       "id": 26
+    },
+    {
+      "entrenador": {
+        "nombre": "eme",
+        "apellido": "mack",
+        "email": "eme@mail.com"
+      },
+      "pokemon": {
+        "nombrePokemon": "pokepomn",
+        "tipoPokemon": "fire",
+        "elemento": "fire",
+        "especie": "venusaur",
+        "altura": "122",
+        "edad": "12"
+      },
+      "id": 27
     }
   ]
 }

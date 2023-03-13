@@ -59,16 +59,13 @@ export const InputModal = ({ name, label, objType, queryKey, queryAction }) => {
           <Modal.Title>Seleccionar {label}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Form onChange={(e)=>console.log(e.value)}>
+          <Form>
             <SpeciesList objType={objType} />
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
           <Button variant="primary" onClick={handleClose}>
-            Save Changes
+            Guardar especie
           </Button>
         </Modal.Footer>
       </Modal>
